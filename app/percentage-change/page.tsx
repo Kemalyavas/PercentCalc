@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { CalculatorCard } from '@/components/calculator-card'
+import { ToolsGrid, SiteFooter } from '@/components/site-footer'
 
 export const metadata: Metadata = {
   title: 'Percentage Change Calculator – Calculate Increase & Decrease',
@@ -14,18 +15,22 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-background">
-      <div className="mx-auto max-w-2xl px-4 py-8 md:py-16">
-        <div className="mb-8 space-y-2 text-center">
-          <h1 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            Percentage Change Calculator
-          </h1>
-          <p className="text-muted-foreground">
-            Calculate percentage increase or decrease between two values instantly.
-          </p>
+    <>
+      <main className="min-h-screen bg-background">
+        <div className="mx-auto max-w-2xl px-4 py-8 md:py-16">
+          <div className="mb-8 space-y-2 text-center">
+            <h1 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+              Percentage Change Calculator
+            </h1>
+            <p className="text-muted-foreground">
+              Calculate percentage increase or decrease between two values instantly.
+            </p>
+          </div>
+          <CalculatorCard title="Percentage Change" type="percentage-change" />
         </div>
-        <CalculatorCard title="Percentage Change" type="percentage-change" />
-      </div>
-    </main>
+        <ToolsGrid />
+      </main>
+      <SiteFooter />
+    </>
   )
 }
