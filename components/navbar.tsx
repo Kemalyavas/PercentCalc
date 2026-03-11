@@ -7,7 +7,9 @@ import { useTheme } from "next-themes"
 
 const NAV_LINKS = [
   { href: "/", label: "Percentage Calculator" },
+  { href: "/percentage-change", label: "Percentage Change" },
   { href: "/tip-calculator", label: "Tip Calculator" },
+  { href: "/discount-calculator", label: "Discount" },
   { href: "/blog", label: "Blog" },
 ]
 
